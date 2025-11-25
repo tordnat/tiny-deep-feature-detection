@@ -16,6 +16,7 @@ class SingleImageDataset(Dataset):
         
         # Load and resize image
         image = Image.open("assets/hovedbygg_left.jpg").convert('RGB')
+        image.resize((240, 320))
         self.image = image  # Store for visualization
         
         # Pre-process once for consistent sizing
@@ -34,7 +35,8 @@ class CocoDataloader(CocoDetection):
     def __init__(self, dataset_root, annotation_file, processor, num_samples=100):
         super().__init__(dataset_root, annotation_file)
         self.processor = processor
-    
+        self.num_samples = num_samples
+
     def __len__(self):
         return self.num_samples
     
@@ -43,3 +45,7 @@ class CocoDataloader(CocoDetection):
         image.resize((240, 320))
         inputs = self.processor(image, return_tensors='pt')
         return inputs['pixel_values'].squeeze(0)
+    
+    def get_image(self, idx): # Mostly for visualization
+        image, _ = super().__getitem__(idx)
+        return image

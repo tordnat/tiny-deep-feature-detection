@@ -13,6 +13,7 @@ dependencies = [
     "opencv-python>=4.11.0.86",
     "plotly>=6.4.0",
     "pycocotools>=2.0.10",
+    "tensorboard>=2.20.0",
     "torchvision>=0.24.0",
     "transformers>=4.57.1",
 ]
