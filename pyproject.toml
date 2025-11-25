@@ -1,0 +1,18 @@
+[project]
+name = "feature-matcher"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jupyter>=1.1.1",
+    "lightning>=2.5.6",
+    "matplotlib>=3.10.7",
+    "notebook>=7.4.7",
+    "numpy>=2.3.4",
+    "opencv-python>=4.11.0.86",
+    "plotly>=6.4.0",
+    "pycocotools>=2.0.10",
+    "torchvision>=0.24.0",
+    "transformers>=4.57.1",
+]
