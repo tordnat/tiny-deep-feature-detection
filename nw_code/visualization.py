@@ -14,7 +14,7 @@ def visualize_results(model, image, processor):
         model = model.cuda()
     
     with torch.no_grad():
-        teacher_heatmap = model._generate_heatmap(pixel_values)[0, 0].cpu().numpy()
+        teacher_heatmap = model._get_teacher_soft_targets(pixel_values)[0, 0].cpu().numpy()
         
         # Student (apply sigmoid for visualization)
         student_logits = model.student(pixel_values)
