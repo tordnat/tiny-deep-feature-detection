@@ -1,12 +1,13 @@
 # Tiny Deep Feature Detection
 
-Tiny feature detector trained using knowledge destillation using Superpoint model
+Tiny feature detector trained using knowledge distillation using Superpoint model
 
 <img width="901" height="128" alt="image" src="https://github.com/user-attachments/assets/dcc17ec2-2bca-4ec5-af40-49738c53bf87" />
 
-Dataset: [MS COCO](https://cocodataset.org/#home)
-Teacher Model: [Superpoint](https://huggingface.co/docs/transformers/main/model_doc/superpoint)
-
+- Dataset: [MS COCO](https://cocodataset.org/#home)
+- Teacher Model: [Superpoint](https://huggingface.co/docs/transformers/main/model_doc/superpoint)
+- Loss: Focal loss + Distillation loss (MSE(soft logits))
+  
 ## Results
 
 <img width="792" height="262" alt="image" src="https://github.com/user-attachments/assets/28ffedc1-ad0d-4548-a7c4-60d274022d68" />
